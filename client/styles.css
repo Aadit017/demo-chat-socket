@@ -23,6 +23,7 @@ body {
 }
 
 .box-border {
+    /* max-width: 340px;; */
     display: flex;
     flex-direction: column;
     position: relative;
@@ -91,42 +92,11 @@ body {
     cursor: pointer;
 }
 
-.message-box {
-    /* display: flex; */
-    text-align: center;
-    /* align-items: center; */
-    /* justify-content: center; */
-    position: relative;
+.message {
     border: 1px solid #ccc;
-    /* Add a border */
-    padding: 20px;
-    margin: 5px;
-    border-radius: 5%;
-    height: auto;
-    /* max-width: 100%; */
-    /* Add padding for spacing */
-}
-.message-box {
-    max-width: 300px;
-    height: auto;
-    /* overflow: hidden; */
-    white-space:nowrap;
-
-    /* Increase the height of the message box when the content reaches a certain limit of the width */
-    /* max-height: 200px; */
-    /* display: block; */
-  }
-  
-/* Ensure the message-box expands only as wide as its content */
-.message-box {
-    display: inline-block;
-    white-space: nowrap;
-}
-
-@media (max-width: 768px) {
-
-    .message-box {
-        display: block;
-        width: auto;
-    }
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    max-width: 80%; /* Set a maximum width */
+    word-wrap: break-word; /* Wrap long words */
 }
