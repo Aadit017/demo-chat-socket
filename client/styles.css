@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    background-color: antiquewhite;
+    max-width: 100%;
+    max-height: 100vh;
+}
+
+.chat-container {
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(161, 141, 141);
+    margin: 10vh;
+    height: 80vh;
+    background-color: aliceblue;
+}
+
+.box-border {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-start;
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    /* bottom:10%; */
+    /* margin-top:-8%;    */
+}
+
+@media (max-width:768px) {
+    .chat-container {
+        height: 95vh;
+        margin: 10px;
+    }
+
+    .box-border {
+        height: 90%;
+    }
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    /* To separate the input and button */
+    align-items: center;
+    margin: 10px;
+    /* Add some spacing */
+}
+
+.options form {
+    width: 100%;
+    /* Ensure the form takes full width */
+    display: flex;
+    flex-direction: row;
+    /* Stack label, input, and button vertically */
+}
+
+.options label {
+    margin-bottom: 10px;
+    /* Add spacing between label and input */
+}
+
+.options input {
+    width: 80%;
+    padding: 10px;
+    /* Add some padding for a better look */
+    border: 1px solid #ccc;
+    /* Add a border for input */
+    border-radius: 5px;
+    /* Add rounded corners */
+}
+
+.options button {
+    width: 20%;
+    padding: 10px;
+    background-color: #007bff;
+    /* Add background color for the button */
+    color: #fff;
+    /* Set text color to white */
+    border: none;
+    /* Remove button border */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.message-box {
+    /* display: flex; */
+    text-align: center;
+    /* align-items: center; */
+    /* justify-content: center; */
+    position: relative;
+    border: 1px solid #ccc;
+    /* Add a border */
+    padding: 20px;
+    margin: 5px;
+    border-radius: 5%;
+    height: auto;
+    /* max-width: 100%; */
+    /* Add padding for spacing */
+}
+.message-box {
+    max-width: 300px;
+    height: auto;
+    /* overflow: hidden; */
+    white-space:nowrap;
+
+    /* Increase the height of the message box when the content reaches a certain limit of the width */
+    /* max-height: 200px; */
+    /* display: block; */
+  }
+  
+/* Ensure the message-box expands only as wide as its content */
+.message-box {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+
+    .message-box {
+        display: block;
+        width: auto;
+    }
+}
